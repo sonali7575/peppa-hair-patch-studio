@@ -23,6 +23,29 @@
     "description":"Personalised non-surgical hair patch consultations and salon services for men and women."
   }
   </script>
+
+  <style>
+    /* Peppa testimonial carousel */
+    .testimonials{background:#64152D;padding:75px 0;overflow:hidden;color:#fff;text-align:center}
+    .testimonials .eyebrow{color:#E9C77A;letter-spacing:2px;font-size:12px;font-weight:700}
+    .testimonials h2{font-family:Georgia,serif;font-size:38px;margin:12px 0 45px}
+    .review-window{overflow:hidden;width:100%}
+    .review-track{display:flex;width:max-content;gap:24px;animation:peppaSlideRight 35s linear infinite;will-change:transform}
+    .review-window:hover .review-track,.review-window:focus-within .review-track{animation-play-state:paused}
+    .review-card{box-sizing:border-box;flex:0 0 360px;width:360px;min-height:270px;padding:30px;text-align:left;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px}
+    .review-card .quote{color:#E9C77A;font-size:30px;line-height:1}
+    .review-card p{font-size:15px;line-height:1.8;font-style:italic}
+    .review-card strong{display:block;margin-top:20px}
+    .review-card small{color:#E8D5DB}
+    @keyframes peppaSlideRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+    @media(max-width:600px){
+      .testimonials{padding:58px 0}
+      .testimonials h2{font-size:29px;margin-bottom:32px}
+      .review-card{flex-basis:290px;width:290px;min-height:290px;padding:24px}
+    }
+    @media(prefers-reduced-motion:reduce){.review-track{animation:none;transform:none}}
+  </style>
+
 </head>
 <body>
   <div class="topbar">Personalised hair solutions · Malleshwaram, Bengaluru · WhatsApp <a href="https://wa.me/919741415707" target="_blank" rel="noopener">+91 97414 15707</a></div>
@@ -81,6 +104,47 @@
         <div><span>03</span><h3>Salon appointments</h3><p>Message us to check availability and plan your visit.</p></div>
       </div>
       <p class="small-note">Please confirm current service availability with Peppa before visiting.</p>
+    </section>
+
+
+    <section class="testimonials" id="testimonials" aria-label="Client testimonials">
+      <p class="eyebrow">CLIENT STORIES</p>
+      <h2>What Our Clients Say</h2>
+      <div class="review-window">
+        <div class="review-track">
+          <article class="review-card">
+            <div class="quote" aria-hidden="true">“</div>
+            <p>I was nervous walking in, but the team made me feel so at ease. The hair patch looks completely natural — even my family couldn't tell. I feel like myself again.</p>
+            <strong>Priya R.</strong><small>Hair Patch Client</small>
+          </article>
+          <article class="review-card">
+            <div class="quote" aria-hidden="true">“</div>
+            <p>After years of hiding under scarves, I finally found a solution that works. The personalised approach here is unlike anything I'd experienced before.</p>
+            <strong>Anand K.</strong><small>Hair Replacement Client</small>
+          </article>
+          <article class="review-card">
+            <div class="quote" aria-hidden="true">“</div>
+            <p>The consultation was so thorough and kind. They understood exactly what I needed without me having to explain too much. Truly a special place.</p>
+            <strong>Meena S.</strong><small>Salon Services Client</small>
+          </article>
+          <!-- Duplicated cards make the carousel loop seamlessly. -->
+          <article class="review-card" aria-hidden="true">
+            <div class="quote">“</div>
+            <p>I was nervous walking in, but the team made me feel so at ease. The hair patch looks completely natural — even my family couldn't tell. I feel like myself again.</p>
+            <strong>Priya R.</strong><small>Hair Patch Client</small>
+          </article>
+          <article class="review-card" aria-hidden="true">
+            <div class="quote">“</div>
+            <p>After years of hiding under scarves, I finally found a solution that works. The personalised approach here is unlike anything I'd experienced before.</p>
+            <strong>Anand K.</strong><small>Hair Replacement Client</small>
+          </article>
+          <article class="review-card" aria-hidden="true">
+            <div class="quote">“</div>
+            <p>The consultation was so thorough and kind. They understood exactly what I needed without me having to explain too much. Truly a special place.</p>
+            <strong>Meena S.</strong><small>Salon Services Client</small>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="consult-banner" id="consultation">
