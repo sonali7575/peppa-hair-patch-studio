@@ -5,7 +5,8 @@ WHAT'S INCLUDED
 - Hair solution sections for men and women
 - Salon services section
 - WhatsApp enquiry links and a consultation request flow
-- Gallery design placeholders
+- Gallery design placeholders (replace with genuine studio photos when available)
+- Custom premium hero visual (`peppa-hero.jpg`)
 - FAQs
 - Location/map search link
 - Basic page metadata and HairSalon structured data
@@ -14,12 +15,12 @@ FILES
 - index.html
 - styles.css
 - script.js
+- peppa-hero.jpg (custom generated hero visual)
 
 BEFORE PUBLISHING
-1. Open script.js and replace 91XXXXXXXXXX with the studio's WhatsApp number.
-   Use country code and digits only, e.g. 919876543210 (example only).
+1. WhatsApp is configured to +91 97414 15707 in script.js and in the visible top information bar. If this number changes, update both locations.
 2. In index.html, update the complete business address, phone number and opening hours once confirmed.
-3. Replace gallery placeholders with genuine studio and service photos. Use customer photos only with clear permission.
+3. The hero uses a custom generated visual, not a real Peppa client or salon photo. Replace it with an authentic studio photo when available. Replace gallery placeholders with genuine studio and service photos. Use customer photos only with clear permission.
 4. Verify each listed service is actually offered. Edit service descriptions accordingly.
 5. Check the Google Maps search result and replace with the exact business pin URL when confirmed.
 6. Test all WhatsApp links on desktop and mobile. WhatsApp links open a pre-filled message; they do not store leads or confirm bookings automatically.

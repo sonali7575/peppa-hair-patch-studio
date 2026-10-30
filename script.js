@@ -1,6 +1,6 @@
 // Configure the real Peppa WhatsApp number before publishing.
 // Use country code + number, digits only. Example format for India: 919876543210
-const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+const WHATSAPP_NUMBER = "919741415707";
 
 function whatsappUrl(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
