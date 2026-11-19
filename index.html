@@ -3,8 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#25182d">
-  <title>Peppa Hair Patch Studio & Curl Studio| Personalised Hair Solutions in Malleshwaram</title>
+  <meta name="theme-color" content="#f2ede5">
+  <!-- Peppa brand favicon: upload the supplied favicon files to the website root. -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+  <link rel="shortcut icon" href="/favicon.ico?v=3">
+  <title>Peppa Hair Patch & Curl Studio | Personalised Hair Solutions in Malleshwaram</title>
   <meta name="description" content="Explore personalised non-surgical hair patch solutions and salon services for men and women at Peppa Hair Patch & Curl Studio in Malleshwaram, Bengaluru. Enquire on WhatsApp for consultation and pricing.">
   <meta property="og:title" content="Peppa Hair Patch & Curl Studio">
   <meta property="og:description" content="Personalised hair solutions and salon care for men and women in Malleshwaram, Bengaluru.">
@@ -270,10 +275,122 @@
       .why-peppa-card { min-height: 0; padding: 23px; }
       .why-peppa .section-heading { text-align: left; }
     }
-\n  </style>
+
+
+    /* Wide, rotating Peppa promotional banner */
+    .peppa-promo-rotator {
+      position: relative;
+      height: 124px;
+      min-height: 124px;
+      overflow: hidden;
+      background: #f1eadf;
+      border-bottom: 1px solid #e2d6c5;
+      color: #302536;
+      isolation: isolate;
+    }
+    .promo-slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 58px 17px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity .65s ease, transform .65s ease, visibility .65s;
+    }
+    .promo-slide.is-active { opacity: 1; visibility: visible; transform: translateY(0); }
+    .promo-before-after, .promo-offer, .promo-highlights {
+      width: min(1180px, 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+    .promo-image-pair { display: flex; gap: 10px; flex: 0 0 auto; }
+    .promo-image-pair figure { position: relative; width: 116px; height: 82px; margin: 0; overflow: hidden; border-radius: 8px; border: 1px solid #d7c7ad; background: #fff; }
+    .promo-image-pair img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .promo-image-pair figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 4px 3px; background: rgba(48,37,54,.76); color: #fff; font-size: 8px; font-weight: 700; letter-spacing: .7px; text-align: center; }
+    .promo-copy { display: grid; gap: 5px; max-width: 560px; }
+    .promo-kicker { color: #9c733e; font-size: 10px; font-weight: 800; letter-spacing: 1.8px; }
+    .promo-copy strong { color: #302536; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(17px, 2vw, 23px); line-height: 1.2; }
+    .promo-copy a, .promo-offer a, .promo-highlights a { color: #302536; font-size: 11px; font-weight: 800; text-decoration: none; border-bottom: 1px solid #b99255; padding-bottom: 3px; white-space: nowrap; }
+    .promo-offer { justify-content: space-between; max-width: 1100px; padding: 0 18px; }
+    .promo-offer-tag { flex: 0 0 auto; padding: 10px 15px; border-radius: 4px; background: #b99255; color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 1.4px; }
+    .promo-offer div { display: grid; gap: 5px; }
+    .promo-offer strong { color: #302536; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(17px, 2vw, 24px); line-height: 1.25; }
+    .promo-offer strong em { color: #9c733e; font-style: normal; }
+    .promo-offer small { color: #766b72; font-size: 10px; }
+    .promo-limited-badge {
+      flex: 0 0 92px; width: 92px; height: 92px; box-sizing: border-box;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      border: 3px double #d5b16c; border-radius: 50%;
+      background: radial-gradient(circle at 35% 28%, #55405b 0%, #302536 72%);
+      color: #fffaf0; text-align: center; line-height: 1.05;
+      box-shadow: 0 5px 16px rgba(48,37,54,.18), 0 0 0 4px rgba(185,146,85,.14);
+      transform: rotate(7deg);
+    }
+    .promo-limited-badge strong { color: #f3d89d; font-size: 11px; letter-spacing: 1.2px; }
+    .promo-limited-badge span { color: #fffaf0; font-size: 10px; letter-spacing: 2px; margin-top: 3px; }
+    .promo-limited-badge b { color: #f3d89d; font-size: 13px; letter-spacing: 1px; margin-top: 4px; }
+    .promo-highlights { gap: 13px; flex-wrap: wrap; }
+    .promo-highlights .promo-kicker { flex-basis: 100%; text-align: center; }
+    .promo-highlights strong { font-size: 12px; color: #302536; }
+    .promo-highlights i { color: #b99255; font-style: normal; font-size: 12px; }
+    .promo-dots { position: absolute; bottom: 7px; left: 0; right: 0; display: flex; justify-content: center; gap: 7px; z-index: 3; }
+    .promo-dots button { width: 6px; height: 6px; padding: 0; border: 0; border-radius: 50%; background: #c9bba8; cursor: pointer; }
+    .promo-dots button.is-active { width: 19px; border-radius: 8px; background: #9c733e; }
+
+    /* Keep the first fold balanced below the taller banner. */
+    .hero-with-consultation { padding-top: clamp(68px, 8vw, 100px) !important; }
+    .hero-with-consultation .hero-content,
+    .hero-with-consultation .hero-form-wrap { transform: translateY(16px); }
+    .hero-with-consultation .hero-content { align-self: center; }
+
+    /* Consistent calm champagne palette: no burgundy testimonial panel. */
+    .testimonials { background: #f2ede5 !important; color: #302536 !important; }
+    .testimonials h2 { color: #302536 !important; }
+    .testimonials .eyebrow { color: #9c733e !important; }
+    .review-card { background: #fffdfa !important; border-color: #e5dCCE !important; color: #302536 !important; box-shadow: 0 10px 28px rgba(48,37,54,.06) !important; }
+    .review-card p { color: #625963 !important; }
+    .review-card strong { color: #302536 !important; }
+    .review-card small { color: #817681 !important; }
+
+    @media (max-width: 700px) {
+      .peppa-promo-rotator { height: 150px; min-height: 150px; }
+      .promo-slide { padding: 9px 18px 20px; }
+      .promo-before-after { gap: 12px; justify-content: flex-start; }
+      .promo-image-pair figure { width: 76px; height: 70px; }
+      .promo-image-pair { gap: 6px; }
+      .promo-copy { gap: 4px; }
+      .promo-copy strong { font-size: 15px; }
+      .promo-copy a { font-size: 10px; }
+      .promo-offer { flex-wrap: wrap; justify-content: center; gap: 8px 13px; text-align: center; }
+      .promo-offer-tag { padding: 7px 10px; font-size: 9px; }
+      .promo-offer div { flex-basis: 100%; order: 2; }
+      .promo-offer strong { font-size: 17px; }
+      .promo-offer a { order: 3; }
+      .promo-limited-badge { flex-basis: 58px; width: 58px; height: 58px; border-width: 2px; order: 1; }
+      .promo-limited-badge strong { font-size: 7px; letter-spacing: .6px; }
+      .promo-limited-badge span { font-size: 7px; letter-spacing: 1px; margin-top: 2px; }
+      .promo-limited-badge b { font-size: 8px; margin-top: 2px; }
+      .promo-highlights { gap: 7px 10px; }
+      .promo-highlights strong { font-size: 10px; }
+      .promo-highlights .promo-kicker { font-size: 9px; }
+      .hero-with-consultation .hero-content,
+      .hero-with-consultation .hero-form-wrap { transform: none; }
+      .hero-with-consultation { padding-top: 48px !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .promo-slide { transition: none; }
+    }
+
+  </style>
 
 </head>
 <body>
+
   <div class="topbar">Personalised hair solutions · Malleshwaram, Bengaluru · WhatsApp <a href="https://wa.me/919741415707" target="_blank" rel="noopener">+91 97414 15707</a></div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Peppa Hair Patch & Curl Studio home">
@@ -285,6 +402,42 @@
       <a href="#faq">FAQs</a><a href="#location">Location</a><a class="nav-cta" href="#consultation">Book a consultation</a>
     </nav>
   </header>
+
+  <!-- Rotating before-and-after and offer banner -->
+  <section class="peppa-promo-rotator" aria-label="Peppa offers and hair transformations">
+    <div class="promo-slide is-active" data-promo-slide aria-hidden="false">
+      <div class="promo-before-after">
+        <div class="promo-image-pair">
+          <figure><img src="assets/images/hair-patch-before-after.webp" alt="Hair patch before and after transformation"><figcaption>BEFORE &amp; AFTER</figcaption></figure>
+          <figure><img src="assets/images/women-volume-before-after.webp" alt="Hair volume before and after transformation"><figcaption>VOLUME TRANSFORMATION</figcaption></figure>
+        </div>
+        <div class="promo-copy"><span class="promo-kicker">THE PEPPA EXPERIENCE</span><strong>See what a personalised hair transformation can look like.</strong><a href="#transformations">Explore transformations <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+    <div class="promo-slide" data-promo-slide aria-hidden="true">
+      <div class="promo-offer">
+        <span class="promo-offer-tag">YEAR-END OFFER</span>
+        <div><strong>Get your hair patch done today &amp; enjoy <em>1 YEAR OF FREE HAIR PATCH SERVICE!</em></strong><small>Speak with our team for offer details. Terms and conditions apply.</small></div>
+        <a href="#consultation">Claim your offer <span aria-hidden="true">↗</span></a>
+        <span class="promo-limited-badge" aria-label="Limited time offer"><strong>LIMITED</strong><span>TIME</span><b>OFFER</b></span>
+      </div>
+    </div>
+    <div class="promo-slide" data-promo-slide aria-hidden="true">
+      <div class="promo-highlights">
+        <span class="promo-kicker">WHY CHOOSE PEPPA</span>
+        <strong>Non-surgical hair replacement</strong><i aria-hidden="true">✦</i>
+        <strong>Customised hair patches</strong><i aria-hidden="true">✦</i>
+        <strong>100% human hair</strong><i aria-hidden="true">✦</i>
+        <strong>15+ years of technician experience</strong>
+        <a href="#why-peppa">Discover Peppa <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="promo-dots" aria-label="Banner slide controls">
+      <button type="button" class="is-active" data-promo-dot="0" aria-label="Show before and after images" aria-pressed="true"></button>
+      <button type="button" data-promo-dot="1" aria-label="Show year-end offer" aria-pressed="false"></button>
+      <button type="button" data-promo-dot="2" aria-label="Show Peppa highlights" aria-pressed="false"></button>
+    </div>
+  </section>
 
   <main>
     <section class="hero hero-with-consultation" id="home">
@@ -605,5 +758,44 @@
       });
     })();
   </script>
+
+  <script>
+    // Accessible rotating promo banner: before/after, year-end offer, and Peppa highlights.
+    (function () {
+      const slides = Array.from(document.querySelectorAll('[data-promo-slide]'));
+      const dots = Array.from(document.querySelectorAll('[data-promo-dot]'));
+      const banner = document.querySelector('.peppa-promo-rotator');
+      if (!slides.length || !dots.length || !banner) return;
+      const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let current = 0;
+      let timer = null;
+      function showSlide(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+          const active = i === current;
+          slide.classList.toggle('is-active', active);
+          slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+        });
+        dots.forEach((dot, i) => {
+          const active = i === current;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      }
+      function stop() { if (timer) window.clearInterval(timer); timer = null; }
+      function start() {
+        stop();
+        if (!reducedMotion) timer = window.setInterval(() => showSlide(current + 1), 6000);
+      }
+      dots.forEach((dot, i) => dot.addEventListener('click', () => { showSlide(i); start(); }));
+      banner.addEventListener('mouseenter', stop);
+      banner.addEventListener('mouseleave', start);
+      banner.addEventListener('focusin', stop);
+      banner.addEventListener('focusout', start);
+      showSlide(0);
+      start();
+    })();
+  </script>
+
 </body>
 </html>
