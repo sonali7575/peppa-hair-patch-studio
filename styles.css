@@ -50,3 +50,42 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* PE PPA – Clean Studio Gallery */
+
+.gallery-grid .gallery-tile {
+    position: relative;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.gallery-grid .gallery-tile::before,
+.gallery-grid .gallery-tile::after {
+    display: none !important;
+    content: none !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.gallery-grid .gallery-tile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Make Our Studio heading visible */
+
+.section.results .section-heading {
+    display: block !important;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+
