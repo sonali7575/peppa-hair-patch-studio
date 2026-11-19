@@ -44,6 +44,159 @@
       .review-card{flex-basis:290px;width:290px;min-height:290px;padding:24px}
     }
     @media(prefers-reduced-motion:reduce){.review-track{animation:none;transform:none}}
+
+    /* Premium hero consultation layout */
+    .hero-with-consultation {
+      display: grid !important;
+      grid-template-columns: minmax(0, 0.92fr) minmax(390px, 0.88fr);
+      align-items: center;
+      gap: clamp(36px, 6vw, 88px);
+      min-height: 650px;
+      padding-top: clamp(54px, 7vw, 88px) !important;
+      padding-bottom: clamp(54px, 7vw, 88px) !important;
+      background: linear-gradient(112deg, #fbf8f2 0%, #fbf8f2 57%, #f0e7da 57%, #f0e7da 100%);
+    }
+    .hero-with-consultation .hero-content {
+      width: 100%;
+      max-width: 590px;
+      justify-self: end;
+    }
+    .hero-with-consultation .hero-content h1 {
+      margin-bottom: 22px;
+    }
+    .hero-with-consultation .hero-copy {
+      max-width: 510px;
+    }
+    .hero-trust-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-top: 30px;
+      color: #6d626b;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .hero-trust-points span::first-letter { color: #b88a4b; }
+    .hero-form-wrap {
+      width: 100%;
+      max-width: 530px;
+      justify-self: start;
+      scroll-margin-top: 24px;
+    }
+    .hero-booking-box {
+      box-sizing: border-box;
+      width: 100%;
+      padding: clamp(25px, 3vw, 38px);
+      background: #fffdf9;
+      border: 1px solid rgba(83, 57, 70, .12);
+      border-radius: 4px;
+      box-shadow: 0 22px 65px rgba(48, 31, 43, .13);
+      color: #2b1d2c;
+    }
+    .hero-booking-box .booking-icon {
+      color: #b88a4b;
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+    .hero-booking-box .eyebrow {
+      color: #a77b42;
+      font-size: 10px;
+      letter-spacing: 1.7px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    .hero-booking-box h2 {
+      color: #2b1d2c;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(25px, 2.5vw, 31px);
+      line-height: 1.2;
+      margin: 0 0 9px;
+    }
+    .hero-booking-box .booking-intro {
+      color: #716873;
+      font-size: 13px;
+      line-height: 1.65;
+      margin: 0 0 20px;
+    }
+    #hero-consultation-form { display: grid; gap: 13px; }
+    .hero-booking-box .form-field { display: grid; gap: 6px; }
+    .hero-booking-box label {
+      color: #332536;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .hero-booking-box label span {
+      color: #8a8088;
+      font-weight: 400;
+    }
+    .hero-booking-box input,
+    .hero-booking-box select,
+    .hero-booking-box textarea {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 44px;
+      padding: 11px 13px;
+      border: 1px solid #e6ddd2;
+      border-radius: 2px;
+      background: #fff;
+      color: #332536;
+      font: inherit;
+      font-size: 13px;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .hero-booking-box textarea { min-height: 64px; resize: vertical; }
+    .hero-booking-box input:focus,
+    .hero-booking-box select:focus,
+    .hero-booking-box textarea:focus {
+      border-color: #b88a4b;
+      box-shadow: 0 0 0 3px rgba(184, 138, 75, .12);
+    }
+    .hero-booking-box .hero-submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 49px;
+      margin-top: 3px;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+    }
+    .hero-booking-box .booking-disclaimer {
+      display: block;
+      margin-top: 13px;
+      color: #817781;
+      font-size: 10px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .hero-with-consultation {
+        grid-template-columns: minmax(0, 1fr) minmax(340px, .95fr);
+        gap: 28px;
+      }
+    }
+    @media (max-width: 700px) {
+      .hero-with-consultation {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        min-height: 0;
+        padding: 48px 22px 52px !important;
+        background: #fbf8f2;
+      }
+      .hero-with-consultation .hero-content,
+      .hero-form-wrap {
+        max-width: 560px;
+        justify-self: center;
+      }
+      .hero-with-consultation .hero-content h1 { font-size: clamp(42px, 12vw, 58px); }
+      .hero-booking-box { padding: 25px 21px; }
+      .hero-trust-points { margin-top: 22px; }
+    }
+
   </style>
 
 </head>
@@ -62,19 +215,65 @@
   </header>
 
   <main>
-    <section class="hero" id="home">
+    <section class="hero hero-with-consultation" id="home">
       <div class="hero-content">
         <p class="eyebrow">YOUR HAIR. YOUR STYLE. YOUR CHOICE.</p>
         <h1>Feel more like<br><em>yourself.</em></h1>
         <p class="hero-copy">Personalised non-surgical hair patch options and salon care for men and women — with a thoughtful consultation, clear guidance and a style that feels right for you.</p>
         <div class="hero-actions">
-          <a class="button button-gold whatsapp-link" href="#consultation" data-message="Hi Peppa Hair Patch Studio, I'd like to enquire about a hair patch consultation.">Enquire on WhatsApp <span>↗</span></a>
+          <a class="button button-gold whatsapp-link" href="#consultation" data-message="Hi Peppa Hair Patch &amp; Curl Studio, I'd like to enquire about your services.">Enquire on WhatsApp <span>↗</span></a>
           <a class="text-link" href="#solutions">Explore hair solutions <span>↓</span></a>
         </div>
         <div class="hero-note"><span>✦</span> Personalised consultations · Pricing on enquiry</div>
+        <div class="hero-trust-points">
+          <span>✦ Consultation first</span>
+          <span>✦ Options for men and women</span>
+          <span>✦ Personalised care</span>
+        </div>
       </div>
-      <div class="hero-art">
-        <img class="hero-photo" src="peppa-hero.jpg" alt="Premium salon-inspired hero visual featuring a confident man with a natural-looking hairstyle" width="590" height="405" fetchpriority="high">
+
+      <div class="hero-form-wrap" id="consultation">
+        <div class="booking-box hero-booking-box">
+          <div class="booking-icon">✦</div>
+          <p class="eyebrow">LET'S START WITH A CONVERSATION</p>
+          <h2>Request a consultation</h2>
+          <p class="booking-intro">Tell us what you're looking for. We'll help you understand the options and next steps.</p>
+
+          <form id="hero-consultation-form">
+            <div class="form-field">
+              <label for="customer-name">Your name</label>
+              <input id="customer-name" name="customer-name" type="text" autocomplete="name" placeholder="Full name" required>
+            </div>
+            <div class="form-field">
+              <label for="customer-phone">Mobile number</label>
+              <input id="customer-phone" name="customer-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number" pattern="[0-9+()\-\s]{10,15}" required>
+            </div>
+            <div class="form-field">
+              <label for="service-choice">I'm interested in</label>
+              <select id="service-choice" name="service-choice" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Men's hair patch consultation</option>
+                <option>Women's hair solutions</option>
+                <option>Hair extensions</option>
+                <option>Wigs &amp; hair systems</option>
+                <option>Hair styling &amp; makeovers</option>
+                <option>Hydra Facial</option>
+                <option>Maintenance &amp; aftercare</option>
+                <option>Other enquiry</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="preferred-time">Preferred day or time <span>(optional)</span></label>
+              <input id="preferred-time" name="preferred-time" type="text" placeholder="e.g. Saturday afternoon">
+            </div>
+            <div class="form-field">
+              <label for="customer-message">Anything you'd like us to know <span>(optional)</span></label>
+              <textarea id="customer-message" name="customer-message" rows="2" placeholder="Share your question or requirement"></textarea>
+            </div>
+            <button class="button button-dark hero-submit" id="booking-button" type="submit">Continue on WhatsApp <span>↗</span></button>
+          </form>
+          <small class="booking-disclaimer">This is an enquiry, not a confirmed booking. The studio will contact you to confirm availability.</small>
+        </div>
       </div>
     </section>
 
@@ -208,20 +407,6 @@
       </div>
     </section>
 
-    <section class="consult-banner" id="consultation">
-      <div><p class="eyebrow">LET'S START WITH A CONVERSATION</p><h2>Your questions<br>come <em>first.</em></h2><p>Ask about available options, pricing, maintenance or appointment availability. Choose a topic below and send a prepared message directly to our WhatsApp.</p></div>
-      <div class="booking-box">
-        <div class="booking-icon">✦</div><h3>Request a consultation</h3><p>Choose what you'd like to discuss. WhatsApp will open with a message you can review before sending.</p>
-        <label for="service-choice">I'm interested in</label>
-        <select id="service-choice">
-          <option>Hair patch consultation</option><option>Hair solutions for women</option><option>Hair solutions for men</option><option>Maintenance and aftercare</option><option>Salon services</option><option>Pricing and availability</option>
-        </select>
-        <label for="preferred-time">Preferred day or time (optional)</label><input id="preferred-time" type="text" placeholder="e.g. Saturday afternoon">
-        <a class="button button-dark" id="booking-button" href="#">Continue on WhatsApp <span>↗</span></a>
-        <small>This is an enquiry, not a confirmed booking. The studio will confirm availability.</small>
-      </div>
-    </section>
-
     <section class="section results" id="results">
       <div class="section-heading">
         <p class="eyebrow">A GLIMPSE INSIDE PEPPA</p>
@@ -285,5 +470,37 @@
   </footer>
   <a class="floating-whatsapp whatsapp-link" href="#consultation" data-message="Hi Peppa Hair Patch Studio, I'd like to make an enquiry." aria-label="Contact Peppa on WhatsApp">☏ <span>WhatsApp us</span></a>
   <script src="script.js"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById('hero-consultation-form');
+      if (!form) return;
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const name = document.getElementById('customer-name').value.trim();
+        const phone = document.getElementById('customer-phone').value.trim();
+        const service = document.getElementById('service-choice').value;
+        const preferred = document.getElementById('preferred-time').value.trim();
+        const note = document.getElementById('customer-message').value.trim();
+
+        const lines = [
+          'Hello Peppa Hair Patch & Curl Studio,',
+          '',
+          'I would like to request a consultation.',
+          'Name: ' + name,
+          'Mobile: ' + phone,
+          'Interested in: ' + service
+        ];
+        if (preferred) lines.push('Preferred day/time: ' + preferred);
+        if (note) lines.push('Message: ' + note);
+        lines.push('', 'Please let me know the next steps and available consultation slots.');
+
+        const url = 'https://wa.me/919741415707?text=' + encodeURIComponent(lines.join('\\n'));
+        window.open(url, '_blank', 'noopener');
+      });
+    })();
+  </script>
 </body>
 </html>
