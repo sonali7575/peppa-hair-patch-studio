@@ -60,7 +60,35 @@
       width: 100%;
       max-width: 590px;
       justify-self: end;
+      align-self: center;
+      transform: translateY(-52px);
     }
+    .brand-logo {
+      display: block;
+      width: 190px;
+      height: auto;
+      max-height: 76px;
+      object-fit: contain;
+      object-position: left center;
+    }
+    .brand { gap: 0; }
+    .about-symbol {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(100%, 300px);
+      min-height: 220px;
+      border: 0 !important;
+      background: transparent !important;
+    }
+    .about-symbol img {
+      display: block;
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      object-fit: contain;
+    }
+    .brand-footer .brand-logo { width: 180px; max-height: 72px; }
     .hero-with-consultation .hero-content h1 {
       margin-bottom: 22px;
     }
@@ -192,6 +220,7 @@
         max-width: 560px;
         justify-self: center;
       }
+      .hero-with-consultation .hero-content { transform: none; }
       .hero-with-consultation .hero-content h1 { font-size: clamp(42px, 12vw, 58px); }
       .hero-booking-box { padding: 25px 21px; }
       .hero-trust-points { margin-top: 22px; }
@@ -235,8 +264,7 @@
   <div class="topbar">Personalised hair solutions · Malleshwaram, Bengaluru · WhatsApp <a href="https://wa.me/919741415707" target="_blank" rel="noopener">+91 97414 15707</a></div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Peppa Hair Patch Studio home">
-      <span class="brand-mark">P</span>
-      <span><strong>PEPPA</strong><small>HAIR PATCH STUDIO</small></span>
+      <img class="brand-logo" src="assets/images/peppa-logo-transparent.png" alt="Peppa Hair Patch and Curl Studio">
     </a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav">
@@ -513,7 +541,7 @@
     </section>
 
     <section class="about-section" id="about">
-      <div class="about-symbol">P<span>✦</span></div>
+      <div class="about-symbol"><img src="assets/images/peppa-logo-transparent.png" alt="Peppa Hair Patch and Curl Studio logo"></div>
       <div><p class="eyebrow">ABOUT PEPPA</p><h2>Personal care starts<br>with a <em>conversation.</em></h2><p>At Peppa Hair Patch Studio, we believe personal style should feel individual. We welcome your questions and help you understand the options available before you decide. Our approach begins with listening to your preferences and explaining practical next steps.</p><a class="arrow-link whatsapp-link" href="#consultation" data-message="Hi Peppa, I'd like to learn more about your studio and services.">Get in touch <span>↗</span></a></div>
     </section>
 
@@ -524,7 +552,7 @@
   </main>
 
   <footer class="footer">
-    <a class="brand brand-footer" href="#home"><span class="brand-mark">P</span><span><strong>PEPPA</strong><small>HAIR PATCH STUDIO</small></span></a>
+    <a class="brand brand-footer" href="#home" aria-label="Peppa Hair Patch Studio home"><img class="brand-logo" src="assets/images/peppa-logo-transparent.png" alt="Peppa Hair Patch and Curl Studio"></a>
     <p>Personalised hair solutions and salon care · Malleshwaram, Bengaluru</p>
     <div class="footer-links"><a href="#solutions">Hair solutions</a><a href="#faq">FAQs</a><a href="#consultation">Enquire</a><a href="https://maps.app.goo.gl/7ZZBGEedtmmBdFvR9?g_st=ic">Location</a></div>
     <small>© <span id="year"></span> Peppa Hair Patch Studio. All rights reserved.</small>
@@ -558,7 +586,7 @@
         if (note) lines.push('Message: ' + note);
         lines.push('', 'Please let me know the next steps and available consultation slots.');
 
-        const url = 'https://wa.me/919741415707?text=' + encodeURIComponent(lines.join('\\n'));
+        const url = 'https://wa.me/919741415707?text=' + encodeURIComponent(lines.join('\n'));
         window.open(url, '_blank', 'noopener');
       });
     })();
