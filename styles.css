@@ -563,6 +563,113 @@
     }
 }
 
+/* PEppa promotional feature slide */
+.promo-feature-slide {
+  background: linear-gradient(120deg, #fffaf2, #f3e8d8) !important;
+  padding: 35px 6% !important;
+}
+
+.promo-feature-inner {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  align-items: center;
+  gap: 45px;
+}
+
+.promo-feature-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.promo-feature-visual img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(48,37,54,.12);
+}
+
+.promo-feature-copy {
+  text-align: left;
+}
+
+.promo-feature-eyebrow {
+  color: #a77a43;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.promo-feature-copy h2 {
+  color: #302536;
+  font-size: 30px;
+  line-height: 1.3;
+  margin: 12px 0 24px;
+}
+
+.promo-feature-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.promo-feature-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #302536;
+}
+
+.promo-feature-icon {
+  color: #b99255;
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.promo-feature-benefit strong {
+  display: block;
+  font-size: 15px;
+}
+
+.promo-feature-benefit small {
+  display: block;
+  color: #817681;
+  margin-top: 5px;
+}
+
+.promo-feature-cta {
+  display: inline-block;
+  background: #38243d;
+  color: #fff !important;
+  padding: 14px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .promo-feature-inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .promo-feature-visual img {
+    height: 155px;
+  }
+
+  .promo-feature-copy h2 {
+    font-size: 23px;
+  }
+
+  .promo-feature-benefits {
+    gap: 14px;
+  }
+}
+
 
 
 
