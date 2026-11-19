@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2ede5">
   <!-- Peppa brand favicon: upload the supplied favicon files to the website root. -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
-  <link rel="shortcut icon" href="/favicon.ico?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+  <link rel="shortcut icon" href="/favicon.ico?v=2">
   <title>Peppa Hair Patch & Curl Studio | Personalised Hair Solutions in Malleshwaram</title>
   <meta name="description" content="Explore personalised non-surgical hair patch solutions and salon services for men and women at Peppa Hair Patch & Curl Studio in Malleshwaram, Bengaluru. Enquire on WhatsApp for consultation and pricing.">
   <meta property="og:title" content="Peppa Hair Patch & Curl Studio">
@@ -280,13 +280,27 @@
     /* Wide, rotating Peppa promotional banner */
     .peppa-promo-rotator {
       position: relative;
-      height: 124px;
-      min-height: 124px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 1;
+      min-height: 0;
       overflow: hidden;
-      background: #f1eadf;
+      background: #fff8ed;
       border-bottom: 1px solid #e2d6c5;
       color: #302536;
       isolation: isolate;
+    }
+    .promo-image-slide {
+      padding: 0;
+      transform: none;
+      background: #fff8ed;
+    }
+    .promo-image-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
     .promo-slide {
       position: absolute;
@@ -341,6 +355,7 @@
     .promo-dots { position: absolute; bottom: 7px; left: 0; right: 0; display: flex; justify-content: center; gap: 7px; z-index: 3; }
     .promo-dots button { width: 6px; height: 6px; padding: 0; border: 0; border-radius: 50%; background: #c9bba8; cursor: pointer; }
     .promo-dots button.is-active { width: 19px; border-radius: 8px; background: #9c733e; }
+    .peppa-promo-rotator.showing-artwork .promo-dots { opacity: 0; pointer-events: none; }
 
     /* Keep the first fold balanced below the taller banner. */
     .hero-with-consultation { padding-top: clamp(68px, 8vw, 100px) !important; }
@@ -358,8 +373,9 @@
     .review-card small { color: #817681 !important; }
 
     @media (max-width: 700px) {
-      .peppa-promo-rotator { height: 150px; min-height: 150px; }
+      .peppa-promo-rotator { height: auto; min-height: 0; aspect-ratio: 3 / 1; }
       .promo-slide { padding: 9px 18px 20px; }
+      .promo-image-slide { padding: 0; }
       .promo-before-after { gap: 12px; justify-content: flex-start; }
       .promo-image-pair figure { width: 76px; height: 70px; }
       .promo-image-pair { gap: 6px; }
@@ -403,9 +419,9 @@
     </nav>
   </header>
 
-  <!-- Rotating before-and-after and offer banner -->
-  <section class="peppa-promo-rotator" aria-label="Peppa offers and hair transformations">
-    <div class="promo-slide is-active" data-promo-slide aria-hidden="false">
+  <!-- Rotating Peppa promotional banner: full artwork, transformations, and studio highlights -->
+  <section class="peppa-promo-rotator" aria-label="Peppa year-end offer, transformations and hair solution highlights">
+    <div class="promo-slide" data-promo-slide aria-hidden="true">
       <div class="promo-before-after">
         <div class="promo-image-pair">
           <figure><img src="assets/images/hair-patch-before-after.webp" alt="Hair patch before and after transformation"><figcaption>BEFORE &amp; AFTER</figcaption></figure>
@@ -414,13 +430,8 @@
         <div class="promo-copy"><span class="promo-kicker">THE PEPPA EXPERIENCE</span><strong>See what a personalised hair transformation can look like.</strong><a href="#transformations">Explore transformations <span aria-hidden="true">↗</span></a></div>
       </div>
     </div>
-    <div class="promo-slide" data-promo-slide aria-hidden="true">
-      <div class="promo-offer">
-        <span class="promo-offer-tag">YEAR-END OFFER</span>
-        <div><strong>Get your hair patch done today &amp; enjoy <em>1 YEAR OF FREE HAIR PATCH SERVICE!</em></strong><small>Speak with our team for offer details. Terms and conditions apply.</small></div>
-        <a href="#consultation">Claim your offer <span aria-hidden="true">↗</span></a>
-        <span class="promo-limited-badge" aria-label="Limited time offer"><strong>LIMITED</strong><span>TIME</span><b>OFFER</b></span>
-      </div>
+    <div class="promo-slide promo-image-slide is-active" data-promo-slide aria-hidden="false">
+      <img src="assets/images/peppa-year-end-offer-banner.webp?v=1" alt="Peppa Year End Offer: Get your hair patch done today and enjoy 1 year free Hair Patch Service. Before and after hair transformation and limited time offer badge. Speak with our team for offer details; terms and conditions apply.">
     </div>
     <div class="promo-slide" data-promo-slide aria-hidden="true">
       <div class="promo-highlights">
@@ -433,12 +444,11 @@
       </div>
     </div>
     <div class="promo-dots" aria-label="Banner slide controls">
-      <button type="button" class="is-active" data-promo-dot="0" aria-label="Show before and after images" aria-pressed="true"></button>
-      <button type="button" data-promo-dot="1" aria-label="Show year-end offer" aria-pressed="false"></button>
+      <button type="button" data-promo-dot="0" aria-label="Show before and after images" aria-pressed="false"></button>
+      <button type="button" class="is-active" data-promo-dot="1" aria-label="Show year-end offer banner" aria-pressed="true"></button>
       <button type="button" data-promo-dot="2" aria-label="Show Peppa highlights" aria-pressed="false"></button>
     </div>
   </section>
-
   <main>
     <section class="hero hero-with-consultation" id="home">
       <div class="hero-content">
@@ -771,6 +781,7 @@
       let timer = null;
       function showSlide(index) {
         current = (index + slides.length) % slides.length;
+        banner.classList.toggle('showing-artwork', current === 1);
         slides.forEach((slide, i) => {
           const active = i === current;
           slide.classList.toggle('is-active', active);
@@ -792,7 +803,7 @@
       banner.addEventListener('mouseleave', start);
       banner.addEventListener('focusin', stop);
       banner.addEventListener('focusout', start);
-      showSlide(0);
+      showSlide(1);
       start();
     })();
   </script>
