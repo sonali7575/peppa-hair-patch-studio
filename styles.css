@@ -494,6 +494,75 @@
   }
 }
 
+/* =====================================
+   PEPPa PROMOTIONAL BANNER - LARGER IMAGES
+===================================== */
+
+.promo-before-after {
+    display: grid !important;
+    grid-template-columns: 42% 1fr !important;
+    align-items: center !important;
+    gap: 35px !important;
+    width: 100% !important;
+}
+
+.promo-image-pair {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+}
+
+.promo-image-pair figure {
+    width: 100% !important;
+    margin: 0 !important;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.promo-image-pair img {
+    width: 100% !important;
+    height: 230px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.promo-copy {
+    width: 100% !important;
+}
+
+/* =====================================
+   TRANSFORMATION SECTION - LARGER IMAGES
+===================================== */
+
+.transformation-card {
+    width: 100%;
+    overflow: hidden;
+}
+
+.transformation-card > img {
+    width: 100% !important;
+    height: 340px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .promo-before-after {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .promo-image-pair img {
+        height: 160px !important;
+    }
+
+    .transformation-card > img {
+        height: 250px !important;
+    }
+}
+
 
 
 
