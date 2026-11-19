@@ -197,7 +197,38 @@
       .hero-trust-points { margin-top: 22px; }
     }
 
-  </style>
+
+    /* Why choose Peppa */
+    .why-peppa { background: #f7f2e9; }
+    .why-peppa .section-heading { max-width: 760px; margin: 0 auto 42px; text-align: center; }
+    .why-peppa-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .why-peppa-card {
+      padding: 28px 23px;
+      background: #fffdfa;
+      border: 1px solid rgba(184,138,75,.22);
+      border-radius: 14px;
+      min-height: 220px;
+    }
+    .why-peppa-icon { display: inline-block; color: #b88a4b; font-size: 25px; margin-bottom: 18px; }
+    .why-peppa-card h3 {
+      color: #332536;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+    .why-peppa-card p { color: #6d626b; font-size: 14px; line-height: 1.75; margin: 0; }
+    @media (max-width: 900px) { .why-peppa-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) {
+      .why-peppa-grid { grid-template-columns: 1fr; gap: 12px; }
+      .why-peppa-card { min-height: 0; padding: 23px; }
+      .why-peppa .section-heading { text-align: left; }
+    }
+\n  </style>
 
 </head>
 <body>
@@ -279,6 +310,36 @@
 
     <section class="trust-strip">
       <div><span>01</span><p>Consultation<br>first</p></div><div><span>02</span><p>Options for<br>men and women</p></div><div><span>03</span><p>Guidance on care<br>and maintenance</p></div>
+    </section>
+
+    <section class="section why-peppa" id="why-peppa">
+      <div class="section-heading">
+        <p class="eyebrow">WHY CHOOSE PEPPA</p>
+        <h2>Confidence begins with<br><em>the right care.</em></h2>
+        <p>Thoughtful hair replacement solutions, personalised to your style and comfort.</p>
+      </div>
+      <div class="why-peppa-grid">
+        <article class="why-peppa-card">
+          <span class="why-peppa-icon">✦</span>
+          <h3>Non-surgical hair replacement</h3>
+          <p>Explore non-surgical options designed to help you achieve a natural-looking appearance.</p>
+        </article>
+        <article class="why-peppa-card">
+          <span class="why-peppa-icon">✧</span>
+          <h3>Customised hair patches</h3>
+          <p>Hair patch solutions personalised to your preferred style, look and requirements.</p>
+        </article>
+        <article class="why-peppa-card">
+          <span class="why-peppa-icon">❋</span>
+          <h3>100% human hair</h3>
+          <p>Hair solutions made with 100% human hair for a natural look and styling flexibility.</p>
+        </article>
+        <article class="why-peppa-card">
+          <span class="why-peppa-icon">✧</span>
+          <h3>15+ years of technician experience</h3>
+          <p>Benefit from the experience and practical guidance of skilled hair technicians.</p>
+        </article>
+      </div>
     </section>
     <section class="section transformations" id="transformations">
       <div class="section-heading">
