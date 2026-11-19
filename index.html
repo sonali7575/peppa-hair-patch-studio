@@ -23,7 +23,9 @@
     "@context":"https://schema.org",
     "@type":"HairSalon",
     "name":"Peppa Hair Patch & Curl Studio",
-    "address":{"@type":"PostalAddress","addressLocality":"2nd Floor,Sirur Park B St,Opp Mantri Mall Sampige Main Road,Malleshwaram","addressRegion":"Karnataka","addressCountry":"IN"},
+    "telephone":"+91 97414 15707",
+    "address":{"@type":"PostalAddress","streetAddress":"2nd Floor, Sirur Park B St, Opp. Mantri Mall, Sampige Main Road, Malleshwaram","addressLocality":"Bengaluru","addressRegion":"Karnataka","postalCode":"560020","addressCountry":"IN"},
+    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:00"}],
     "areaServed":"Malleshwaram, Bengaluru",
     "description":"Personalised non-surgical hair patch consultations and salon services for men and women."
   }
@@ -407,7 +409,7 @@
 </head>
 <body>
 
-  <div class="topbar">Personalised hair solutions · Malleshwaram, Bengaluru · WhatsApp <a href="https://wa.me/919741415707" target="_blank" rel="noopener">+91 97414 15707</a></div>
+  <div class="topbar">Open daily 10:00 AM–8:00 PM · Malleshwaram, Bengaluru · WhatsApp <a href="https://wa.me/919741415707" target="_blank" rel="noopener">+91 97414 15707</a></div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Peppa Hair Patch & Curl Studio home">
       <img class="brand-logo" src="assets/images/peppa-logo-transparent.png" alt="Peppa Hair Patch and Curl Studio">
@@ -668,43 +670,12 @@
     </section>
 
 
-    <section class="testimonials" id="testimonials" aria-label="Client testimonials">
-      <p class="eyebrow">CLIENT STORIES</p>
-      <h2>What Our Clients Say</h2>
-      <div class="review-window">
-        <div class="review-track">
-          <article class="review-card">
-            <div class="quote" aria-hidden="true">“</div>
-            <p>I was nervous walking in, but the team made me feel so at ease. The hair patch looks completely natural — even my family couldn't tell. I feel like myself again.</p>
-            <strong>Priya R.</strong><small>Hair Patch Client</small>
-          </article>
-          <article class="review-card">
-            <div class="quote" aria-hidden="true">“</div>
-            <p>After years of hiding under scarves, I finally found a solution that works. The personalised approach here is unlike anything I'd experienced before.</p>
-            <strong>Anand K.</strong><small>Hair Replacement Client</small>
-          </article>
-          <article class="review-card">
-            <div class="quote" aria-hidden="true">“</div>
-            <p>The consultation was so thorough and kind. They understood exactly what I needed without me having to explain too much. Truly a special place.</p>
-            <strong>Meena S.</strong><small>Salon Services Client</small>
-          </article>
-          <!-- Duplicated cards make the carousel loop seamlessly. -->
-          <article class="review-card" aria-hidden="true">
-            <div class="quote">“</div>
-            <p>I was nervous walking in, but the team made me feel so at ease. The hair patch looks completely natural — even my family couldn't tell. I feel like myself again.</p>
-            <strong>Priya R.</strong><small>Hair Patch Client</small>
-          </article>
-          <article class="review-card" aria-hidden="true">
-            <div class="quote">“</div>
-            <p>After years of hiding under scarves, I finally found a solution that works. The personalised approach here is unlike anything I'd experienced before.</p>
-            <strong>Anand K.</strong><small>Hair Replacement Client</small>
-          </article>
-          <article class="review-card" aria-hidden="true">
-            <div class="quote">“</div>
-            <p>The consultation was so thorough and kind. They understood exactly what I needed without me having to explain too much. Truly a special place.</p>
-            <strong>Meena S.</strong><small>Salon Services Client</small>
-          </article>
-        </div>
+    <section class="section" id="private-consultation">
+      <div class="section-heading">
+        <p class="eyebrow">A COMFORTABLE FIRST STEP</p>
+        <h2>Your questions come first.</h2>
+        <p>If you would prefer to discuss your hair concerns privately, message us to request a private consultation. You can ask questions and understand the available options before making a decision.</p>
+        <a class="button button-gold whatsapp-link" href="#consultation" data-message="Hi Peppa Hair Patch & Curl Studio, I would like to request a private hair consultation. Please share the available appointment times.">Request a private consultation <span>↗</span></a>
       </div>
     </section>
 
@@ -713,7 +684,7 @@
         <p class="eyebrow">A GLIMPSE INSIDE PEPPA</p>
         <h2>Our Studio</h2>
         <p>
-          A welcoming space for personalised hair solutions,styling and care. Take a look around.
+          A welcoming space for personalised hair solutions, styling and care. Take a look around.
         </p>
       </div>
       <div class="gallery-grid">
@@ -747,7 +718,8 @@
         <details><summary>Do you offer options for both men and women?</summary><p>We welcome enquiries from both men and women. Contact the studio to confirm which options are currently available for your needs.</p></details>
         <details><summary>How do I care for a hair system?</summary><p>Care routines depend on the system and attachment method. Ask the studio for the recommended maintenance and aftercare instructions for your chosen option.</p></details>
         <details><summary>How long does a hair patch last?</summary><p>Lifespan varies with the product, use, maintenance and care. The studio can explain expected upkeep for the options it offers.</p></details>
-        <details><summary>Where is Peppa Hair Patch & Curl Studio located?</summary><p>We are in Malleshwaram, Bengaluru. Please confirm the complete address and current opening hours before travelling.</p></details>
+        <details><summary>Where is Peppa Hair Patch & Curl Studio located?</summary><p>2nd Floor, Sirur Park B St, Opp. Mantri Mall, Sampige Main Road, Malleshwaram, Bengaluru, Karnataka 560020.</p></details>
+        <details><summary>What are your opening hours?</summary><p>We are open every day, Monday to Sunday, from 10:00 AM to 8:00 PM.</p></details>
       </div>
       <div class="faq-cta"><h3>Still have questions?</h3><p>Tell us what you'd like to know. We're happy to help you explore your options.</p><a class="button button-gold whatsapp-link" href="#consultation" data-message="Hi Peppa Hair Patch Studio, I have a few questions before booking a consultation.">Ask Peppa on WhatsApp <span>↗</span></a></div>
     </section>
@@ -758,14 +730,21 @@
     </section>
 
     <section class="section location" id="location">
-      <div class="location-copy"><p class="eyebrow">COME SAY HELLO</p><h2>Find us in<br><em>2nd Floor,Sirur Park B St,Opp Mantri Mall Sampige Main Road,Malleshwaram Bangalore 560020.</em></h2><p><strong>Peppa Hair Patch Studio</strong><br>Malleshwaram, Bengaluru, Karnataka</p><p class="small-note">Before launch, add the complete street address, business phone number and confirmed opening hours.</p><a class="button button-outline" href="https://www.google.com/maps/search/?api=1&query=Peppa+Hair+Patch+Studio+Malleshwaram+Bengaluru" target="_blank" rel="noopener">Search Google Maps <span>↗</span></a></div>
-      <div class="map-card"><div class="map-lines"></div><div class="map-pin">✦</div><div class="map-label"><strong>PEPPA HAIR PATCH & CURL STUDIO</strong><span>Malleshwaram · Bengaluru</span></div><a href="https://www.google.com/maps/search/?api=1&query=Peppa+Hair+Patch+Studio+Malleshwaram+Bengaluru" target="_blank" rel="noopener" aria-label="Open map search">↗</a></div>
+      <div class="location-copy">
+        <p class="eyebrow">COME SAY HELLO</p>
+        <h2>Visit Peppa in<br><em>Malleshwaram, Bengaluru.</em></h2>
+        <p><strong>Peppa Hair Patch &amp; Curl Studio</strong><br>2nd Floor, Sirur Park B St,<br>Opp. Mantri Mall, Sampige Main Road,<br>Malleshwaram, Bengaluru, Karnataka 560020.</p>
+        <p><strong>Opening hours</strong><br>Every day · 10:00 AM–8:00 PM</p>
+        <p><strong>Call us</strong><br><a href="tel:+919741415707">+91 97414 15707</a></p>
+        <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&amp;query=2nd+Floor%2C+Sirur+Park+B+St%2C+Opp.+Mantri+Mall%2C+Sampige+Main+Road%2C+Malleshwaram%2C+Bengaluru+560020" target="_blank" rel="noopener">Get directions on Google Maps <span>↗</span></a>
+      </div>
+      <div class="map-card"><div class="map-lines"></div><div class="map-pin">✦</div><div class="map-label"><strong>PEPPA HAIR PATCH &amp; CURL STUDIO</strong><span>2nd Floor · Opp. Mantri Mall</span></div><a href="https://www.google.com/maps/search/?api=1&amp;query=2nd+Floor%2C+Sirur+Park+B+St%2C+Opp.+Mantri+Mall%2C+Sampige+Main+Road%2C+Malleshwaram%2C+Bengaluru+560020" target="_blank" rel="noopener" aria-label="Open directions in Google Maps">↗</a></div>
     </section>
   </main>
 
   <footer class="footer">
     <a class="brand brand-footer" href="#home" aria-label="Peppa Hair Patch Studio home"><img class="brand-logo" src="assets/images/peppa-logo-transparent.png" alt="Peppa Hair Patch & Curl Studio"></a>
-    <p>Personalised hair solutions and salon care · Malleshwaram, Bengaluru</p>
+    <p>Personalised hair solutions and salon care · Malleshwaram, Bengaluru<br>Open daily 10:00 AM–8:00 PM · <a href="tel:+919741415707">+91 97414 15707</a></p>
     <div class="footer-links"><a href="#solutions">Hair solutions</a><a href="#faq">FAQs</a><a href="#consultation">Enquire</a><a href="https://maps.app.goo.gl/7ZZBGEedtmmBdFvR9?g_st=ic">Location</a></div>
     <small>© <span id="year"></span> Peppa Hair Patch & Curl Studio. All rights reserved.</small>
   </footer>
