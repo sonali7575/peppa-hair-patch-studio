@@ -670,6 +670,89 @@
   }
 }
 
+/* Refined Peppa first promotional slide */
+
+.promo-before-after {
+  display: grid !important;
+  grid-template-columns: 1.1fr 0.9fr !important;
+  align-items: center !important;
+  gap: 55px !important;
+  max-width: 1180px;
+  margin: auto;
+  width: 100%;
+}
+
+.promo-image-pair {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+}
+
+.promo-image-pair figure {
+  width: 100% !important;
+  height: 230px !important;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.promo-image-pair img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.promo-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  text-align: left !important;
+}
+
+.promo-copy .promo-kicker {
+  color: #a77a43;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.promo-copy strong {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.2;
+  color: #302536;
+  max-width: 500px;
+}
+
+.promo-copy a {
+  display: inline-block;
+  background: #38243d;
+  color: #fff !important;
+  padding: 14px 23px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+@media(max-width:700px) {
+  .promo-before-after {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+  }
+
+  .promo-image-pair figure {
+    height: 150px !important;
+  }
+
+  .promo-copy strong {
+    font-size: 27px;
+  }
+}
+
+
 
 
 
