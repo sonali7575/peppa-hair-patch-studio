@@ -87,5 +87,44 @@
     display: block !important;
     text-align: center;
     margin: 0 auto 30px;
+ 
+/* FINAL FIX - CLEAN PEPPa STUDIO GALLERY */
+
+.gallery-grid {
+    gap: 16px !important;
+}
+
+.gallery-grid .gallery-tile {
+    background: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.gallery-grid .gallery-tile::before,
+.gallery-grid .gallery-tile::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.gallery-grid .gallery-tile img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
 }
 
