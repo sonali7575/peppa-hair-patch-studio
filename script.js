@@ -7,7 +7,7 @@ function whatsappUrl(message) {
 }
 function updateWhatsAppLinks() {
   document.querySelectorAll(".whatsapp-link").forEach((link) => {
-    const message = link.dataset.message || "Hi Peppa Hair Patch Studio, I'd like to make an enquiry.";
+    const message = link.dataset.message || "Hi Peppa Hair Patch & Curl Studio, I'd like to make an enquiry.";
     link.href = whatsappUrl(message);
     link.target = "_blank";
     link.rel = "noopener";
@@ -19,7 +19,7 @@ const bookingButton = document.getElementById("booking-button");
 function updateBookingMessage() {
   if (!serviceChoice || !bookingButton) return;
   const time = preferredTime?.value.trim();
-  const message = `Hi Peppa Hair Patch Studio, I'd like to enquire about: ${serviceChoice.value}.${time ? ` My preferred day/time is ${time}.` : ""} Please share pricing and available appointment times.`;
+  const message = `Hi Peppa Hair Patch & Curl Studio, I'd like to enquire about: ${serviceChoice.value}.${time ? ` My preferred day/time is ${time}.` : ""} Please share pricing and available appointment times.`;
   bookingButton.href = whatsappUrl(message);
   bookingButton.target = "_blank";
   bookingButton.rel = "noopener";
