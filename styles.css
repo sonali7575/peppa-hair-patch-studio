@@ -261,5 +261,47 @@
     font-size: 19px;
   }
 }
+/* =========================================
+   PEPPA PROMOTIONAL BANNER
+========================================= */
+
+.peppa-promo-rotator {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #fff8ee;
+}
+
+/* Promotional image slide */
+.promo-image-slide {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.promo-image-slide.is-active {
+    display: block;
+}
+
+.promo-image-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 540px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+}
+
+/* Mobile banner */
+@media (max-width: 768px) {
+    .promo-image-slide img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+}
 
 
